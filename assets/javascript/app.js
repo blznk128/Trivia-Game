@@ -6,7 +6,7 @@ $("#startClock").on("click", function (){
     });
 
 $('#startClock').click(function(){
-    var counter = 10;
+    var counter = 45;
     setInterval(function() {
       counter--;
       if (counter >= 0) {
