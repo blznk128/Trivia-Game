@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 $("#startClock").on("click", function (){
       $('#container').show();
       $("#startClock").hide();
@@ -5,7 +6,7 @@ $("#startClock").on("click", function (){
     });
 
 $('#startClock').click(function(){
-    var counter = 45;
+    var counter = 10;
     setInterval(function() {
       counter--;
       if (counter >= 0) {
@@ -88,7 +89,17 @@ function checkAnswers(questions) {
       incorrectAnswers++;
     }
   }
+
   $("#correct").text(correctAnswers + " Correct");
   $("#incorrect").text(incorrectAnswers + " Wrong");
   $("#unanswered").text(unAnswered + " Not answered");
 }
+$('#done').click(function(){
+  alert('Done already?');
+      checkAnswers(trivia);
+      $("#container").hide();
+      $("#startClock").hide();
+      $("#results").text("Results");
+      $("#thanks").text("Thanks for playing!");
+});
+});
