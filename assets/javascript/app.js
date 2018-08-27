@@ -1,18 +1,24 @@
 $("#startClock").on("click", function (){
       $('#container').show();
+      $("#startClock").hide();
+      $("#start").hide();
     });
 
 $('#startClock').click(function(){
-    var counter = 5;
+    var counter = 45;
     setInterval(function() {
       counter--;
       if (counter >= 0) {
-      span = $("#count").text(counter +" seconds");
+      span = $("#count").text("Time Left " + counter +" seconds");
     }
     if (counter === 0) {
         alert('Time!');
         clearInterval(counter);
         checkAnswers(trivia);
+        $("#container").hide();
+        $("#startClock").hide();
+        $("#results").text("Results");
+        $("#thanks").text("Thanks for playing!");
     }
   }, 1000);  
 });
@@ -56,11 +62,11 @@ var trivia = [
   }
 ];
 for(var i = 0; i<trivia.length;i++) {
-  $("#question-holder").append(trivia[i].question + "</br>");
+  $("#question-holder").append("<p>" + trivia[i].question + "</p>");
   for(var k = 0; k < trivia[i].choices.length;k++) {
     $("#question-holder").append('<input type="radio" name="' + trivia[i].choiceName + '" value="' + trivia[i].choices[k] + '">'+ trivia[i].choices[k] +' </input>');
     }
-    $("#question-holder").append("</br></br></br>")
+    $("#question-holder").append("</br></br>")
 }
 
 function checkAnswers(questions) {
@@ -83,6 +89,6 @@ function checkAnswers(questions) {
     }
   }
   $("#correct").text(correctAnswers + " Correct");
-  $("#incorrect").text(incorrectAnswers + " WRONG");
+  $("#incorrect").text(incorrectAnswers + " Wrong");
   $("#unanswered").text(unAnswered + " Not answered");
 }

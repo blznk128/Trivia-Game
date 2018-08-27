@@ -1,3 +1,60 @@
 #container {
 	display: none;
 }
+
+body {
+	background:url("../images/warcraft\ picture.jpg");
+	text-align: center;
+}
+
+#start {
+	color: red;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 40px;
+}
+
+h1 {
+	color: red;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 400px;
+	font-size: 65px;
+}
+
+#correct,#incorrect,#unanswered,#question-holder,#startClock,#count,#results {
+	
+	color: lime;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 400px;
+	font-size: 20px;
+}
+
+p {
+	color: yellow;
+	font-size: 25px;
+}
+
+#count {
+	font-size: 35px;
+}
+
+#results {
+	font-size: 40px;
+}
+
+#thanks {
+	color: red;
+	font-size: 40px;
+	position: relative;
+	animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    from {left: -300px;}
+	to {left: 300px;}
+}
+
