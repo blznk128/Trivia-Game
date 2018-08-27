@@ -1,3 +1,7 @@
+$("#startClock").on("click", function (){
+      $('#container').show();
+    });
+
 $('#startClock').click(function(){
     var counter = 5;
     setInterval(function() {
@@ -13,8 +17,6 @@ $('#startClock').click(function(){
   }, 1000);  
 });
 
-//var questions = ["How many classes are in world of warcraft?","What year was world of warcraft released?"];
-//var choices = [[10, 12, 14, 16], [2004,2005,2008,2010]];
 var trivia = [
   {
     question: "How many classes are in world of wacraft?",
@@ -30,9 +32,27 @@ var trivia = [
   },
   {
     question: "What was the first raid available in vanilla WoW",
-    choices: ["Blackwing Lair", "Naxxaramus","Molten Core", "Onxyias Lair"],
+    choices: ["Blackwing Lair", "Naxxaramas","Molten Core", "Onyxia's Lair"],
     answer: 2,
     choiceName: "choiceThree"
+  },
+  {
+    question: "What is the current level cap in world of wacraft?",
+    choices: [100, 110, 115, 120],
+    answer: 3,
+    choiceName: "choiceFour"
+  },
+  {
+    question: "What is the only world of warcraft class that only has two specializations?",
+    choices: ["Monk", "Death Knight", "Demon Hunter", "Priest"],
+    answer: 2,
+    choiceName: "choiceFive"
+  },
+  {
+    question: "In world of warcraft, what does PvE stand for?",
+    choices: ["Player vs Environment", "Pete vs Eric", "Player vs Everybody", "Person vs Environment"],
+    answer: 0,
+    choiceName: "choiceSix"
   }
 ];
 for(var i = 0; i<trivia.length;i++) {
@@ -40,7 +60,7 @@ for(var i = 0; i<trivia.length;i++) {
   for(var k = 0; k < trivia[i].choices.length;k++) {
     $("#question-holder").append('<input type="radio" name="' + trivia[i].choiceName + '" value="' + trivia[i].choices[k] + '">'+ trivia[i].choices[k] +' </input>');
     }
-    $("#question-holder").append("</br>")
+    $("#question-holder").append("</br></br></br>")
 }
 
 function checkAnswers(questions) {
@@ -57,32 +77,12 @@ function checkAnswers(questions) {
     var correctRadioButton = answerButtons.eq(questions[i].answer);
     var correctRadioButtonIsChecked = correctRadioButton.is(':checked');
     if (correctRadioButtonIsChecked) {
-      correctAnswers++;
+      correctAnswers++
     } else {
       incorrectAnswers++;
     }
   }
-  $("#correct").text(correctAnswers);
-  $("#incorrect").text(incorrectAnswers);
-  $("#unanswered").text(unAnswered);
+  $("#correct").text(correctAnswers + " Correct");
+  $("#incorrect").text(incorrectAnswers + " WRONG");
+  $("#unanswered").text(unAnswered + " Not answered");
 }
-
-
-
-
-
-
-
-
-
-
-
-// for(var i = 0;i<questions.length;i++) {
-//   $("#question-holder").append(questions[i] + "</br>");
-//   for(var k = 0;i<choices.length;k++) {
-
-//   }
-// }
-    
-
-
