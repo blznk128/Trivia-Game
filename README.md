@@ -4,5 +4,5 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 
 This is a trivia game app, you click the start button then answer the following questions before the timer ends! If you finish early, there is a done button and it will take you to the results page.
 
-link to portfolio https://blznk128.github.io/portfolio.html
+link to portfolio https://blznk128.github.io/newportfolio.html
 link to website:  https://blznk128.github.io/TriviaGame/
