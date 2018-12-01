@@ -5,5 +5,6 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 This is a trivia game app, you click the start button then answer the following questions before the timer ends! If you finish early, there is a done button and it will take you to the results page.  I based my trivia game on a game I used to play a ton, world of warcraft.
 
 Technologies used: HTML, CSS, JQuery, and Bootstrap for that extra icing on the cake.
-link to portfolio https://blznk128.github.io/#portfolioJump
-link to website:  https://blznk128.github.io/TriviaGame/
+
+Link to my portfolio https://blznk128.github.io/#portfolioJump
+Link to hosted website:  https://blznk128.github.io/TriviaGame/
